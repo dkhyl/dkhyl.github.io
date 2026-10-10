@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061018">
+  <meta name="description" content="Dakhel Alhawtah — Featured cybersecurity projects and hands-on labs.">
+  <title>Projects — Dakhel Alhawtah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dakhel home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 3 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+          <rect x="1" y="0" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="1" width="1" height="1" fill="currentColor"/>
+          <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="1" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>DAKHEL <b>ALHAWTAH</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="certifications.html">Certifications</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="ctf.html">CTF</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☼</button>
+  </header>
+
+  <main>
+    <section class="content-section section-wrap" style="padding-top:64px;">
+      <div class="section-heading">
+        <p class="eyebrow">03 / SELECTED WORK</p>
+        <h2>Featured <span>Projects</span></h2>
+        <p>Practical work, experiments, and learning projects. Click any project to read the full story.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1: Dakhel Law Firm -->
+        <article class="project-card featured-project">
+          <div class="project-top">
+            <span class="project-symbol">⚔</span>
+            <span class="project-status"><i></i> In progress</span>
+          </div>
+          <p class="project-type">PENETRATION TESTING LAB</p>
+          <h3>Dakhel Law Firm Pentest Lab</h3>
+          <p>A controlled internal network assessment of a fictional law firm, following the complete 5-phase penetration testing methodology. Includes SMB enumeration, credential discovery, lateral movement, and privilege escalation — ending in a professional report with MITRE ATT&amp;CK mapping.</p>
+          <div class="project-tags">
+            <span>Windows</span>
+            <span>OpenVPN</span>
+            <span>Impacket</span>
+            <span>MITRE ATT&amp;CK</span>
+            <span>Reporting</span>
+          </div>
+          <a class="project-link" href="project-lawfirm.html">Read full write-up <span>↗</span></a>
+        </article>
+
+        <!-- PROJECT 2: DVWA -->
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-symbol blue">⚔</span>
+            <span class="project-status">Web security</span>
+          </div>
+          <p class="project-type">PYTHON AUTOMATION</p>
+          <h3>DVWA Automation</h3>
+          <p>Python scripts that automate the exploitation of DVWA's low-security challenges. Covers SQL injection, reflected and stored XSS, and command injection - each demonstrated through structured, reproducible automation.</p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>SQLi</span>
+            <span>XSS</span>
+            <span>Command Injection</span>
+          </div>
+          <a class="project-link" href="project-dvwa.html">Read full write-up <span>↗</span></a>
+        </article>
+
+        <!-- PROJECT 3: CS50x Final -->
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-symbol purple">&lt;/&gt;</span>
+            <span class="project-status">Web development</span>
+          </div>
+          <p class="project-type">CS50X CAPSTONE</p>
+          <h3>URL Shortener — CS50x</h3>
+          <p>A web-based URL shortening application built as the final capstone for Harvard's CS50x. Python + Flask backend with an interactive HTML/CSS/JavaScript frontend. Users paste long URLs and receive shareable short links.</p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>JavaScript</span>
+            <span>HTML/CSS</span>
+          </div>
+          <a class="project-link" href="project-cs50.html">Read full write-up <span>↗</span></a>
+        </article>
+
+        <!-- PROJECT 4: search4me -->
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-symbol green">🔭</span>
+            <span class="project-status">Scripting</span>
+          </div>
+          <p class="project-type">SHELL TOOL</p>
+          <h3>Search4Me</h3>
+          <p>A lightweight shell-based utility that lets users search across multiple websites from a single interface. Includes a menu of 24 predefined sites and support for adding custom search targets.</p>
+          <div class="project-tags">
+            <span>Bash</span>
+            <span>Linux</span>
+            <span>Automation</span>
+          </div>
+          <a class="project-link" href="project-search4me.html">Read full write-up <span>↗</span></a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="contact-section section-wrap">
+      <div>
+        <p class="eyebrow">ALSO</p>
+        <h2>CTF <span>experience</span></h2>
+        <p>Competitions I've joined and results achieved.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="button primary" href="ctf.html">See CTF achievements →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg viewBox="0 0 3 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+          <rect x="1" y="0" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="1" width="1" height="1" fill="currentColor"/>
+          <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="1" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>DAKHEL <b>ALHAWTAH</b></span>
+    </a>
+    <!-- <a href="#home" class="back-top">Back to top ↑</a> -->
+    <small>© <span id="year"></span> Dakhel Alhawtah · Built with HTML, JavaScript, Tailwind CSS</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

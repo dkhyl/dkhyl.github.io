@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061018">
+  <meta name="description" content="DVWA Automation — Python automation for practicing web application exploitation in a controlled lab.">
+  <title>DVWA Automation — Dakhel Alhawtah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .next-project-card {
+      padding: 32px;
+      background: linear-gradient(135deg,
+        rgba(88,166,255,0.08) 0%,
+        rgba(88,166,255,0.02) 100%);
+      border: 1px solid rgba(88,166,255,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      position: relative;
+      transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .next-project-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .next-project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(88,166,255,0.15), 0 0 24px rgba(88,166,255,0.08);
+    }
+
+    .next-project-card:hover::before {
+      opacity: 1;
+    }
+
+    .next-project-title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .next-project-title span {
+      background: linear-gradient(135deg, var(--accent), #79c0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dakhel home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 3 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+          <rect x="1" y="0" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="1" width="1" height="1" fill="currentColor"/>
+          <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="1" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>DAKHEL <b>ALHAWTAH</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" type="button">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="certifications.html">Certifications</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="ctf.html">CTF</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">☼</button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="content-section section-wrap" style="padding-top:64px;">
+      <div class="section-heading">
+        <p class="eyebrow">PROJECT · WEB SECURITY AUTOMATION</p>
+        <h2>DVWA <span>Automation</span></h2>
+            <p>My first hands-on project with Python. Built as a beginner exercise to learn libraries like <strong style="color:var(--text);">Requests</strong> and <strong style="color:var(--text);">BeautifulSoup</strong>, this project automates basic web scraping and interaction tasks against Damn Vulnerable Web Application (DVWA) at the low security level.</p>        <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+          <span class="project-status" style="color:#7ee787;border-color:rgba(126,231,135,0.3);"><i style="background:#7ee787;box-shadow:0 0 6px #7ee787;"></i> Completed</span>
+          <span class="rank-pill" style="color:var(--accent);background:var(--accent-soft);border-color:rgba(88,166,255,0.25);">Python · DVWA · Web Exploitation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="content-section section-wrap" style="padding-top:20px;">
+      <div class="section-heading">
+        <p class="eyebrow">01 / OVERVIEW</p>
+        <h2>What this <span>project covers</span></h2>
+      </div>
+      <div class="about-grid">
+        <article class="panel about-main methodology-intro">
+        <h3>The starting point</h3>
+        <p>This was my first real Python project. The goal wasn't to build a sophisticated tool - it was to learn how Python works with HTTP requests, HTML parsing, and simple automation. DVWA at the low security level was the perfect practice target because the responses are predictable.</p>
+        <p class="muted">Every script here is a learning artifact: some are rough, some are clean, but all of them show the progression from "how does this work?" to "I can build this."</p>
+        </article>
+        <div class="value-cards">
+          <article class="mini-panel">
+            <span class="mini-icon">◎</span>
+            <div>
+              <h3>Scope</h3>
+              <p>DVWA running locally in an isolated lab.</p>
+            </div>
+          </article>
+          <article class="mini-panel">
+            <span class="mini-icon">◈</span>
+            <div>
+              <h3>Type</h3>
+              <p>Automated web exploitation practice.</p>
+            </div>
+          </article>
+          <article class="mini-panel">
+            <span class="mini-icon">▤</span>
+            <div>
+              <h3>Deliverable</h3>
+              <p>Python scripts + usage documentation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VULNERABILITIES -->
+    <section class="content-section section-wrap">
+    <div class="section-heading">
+        <p class="eyebrow">02 / WHAT I PRACTICED</p>
+        <h2>Topics I <span>explored</span></h2>
+    </div>
+
+    <div class="skills-grid" style="grid-template-columns:repeat(2,1fr);">
+        <article class="panel skill-panel">
+        <div class="skill-heading"><span>◈</span><h3>HTTP Requests with Python</h3></div>
+        <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">
+            Using the <strong style="color:var(--text);">Requests</strong> library to send GET/POST requests, manage sessions, and handle cookies against a web application.
+        </p>
+        </article>
+
+        <article class="panel skill-panel">
+        <div class="skill-heading"><span>⚡</span><h3>HTML Parsing &amp; Scraping</h3></div>
+        <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">
+            Parsing HTML responses with <strong style="color:var(--text);">BeautifulSoup</strong> to extract data - the foundation of any web scraping work.
+        </p>
+        </article>
+
+        <article class="panel skill-panel">
+        <div class="skill-heading"><span>⌘</span><h3>Form Automation</h3></div>
+        <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">
+            Automating form submissions and login flows - reading input fields, sending crafted data, and verifying responses.
+        </p>
+        </article>
+
+        <article class="panel skill-panel">
+        <div class="skill-heading"><span>◎</span><h3>Basic Web Exploitation</h3></div>
+        <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">
+            Practicing SQLi, XSS, and command injection at the DVWA <strong style="color:var(--text);">low security level</strong> - the entry point for understanding how these flaws work.
+        </p>
+        </article>
+    </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="content-section section-wrap">
+        <div class="section-heading">
+            <p class="eyebrow">03 / LEARNING NOTES</p>
+            <h2>What I <span>learned</span></h2>
+        </div>
+        <article class="panel methodology-intro">
+            <p style="font-size:14.5px;line-height:1.9;color:var(--muted);">
+            This project gave me a working understanding of how HTTP actually works -  sessions, cookies, and form data - and how Python can interact with a web application through libraries like Requests and BeautifulSoup.
+            </p>
+            <p style="font-size:14.5px;line-height:1.9;color:var(--muted);margin-top:16px;">
+            It was the foundation I needed before moving into more advanced work. The concepts I practiced here - request handling, HTML parsing, and session management - became the building blocks for every web security project I've worked on since.
+            </p>
+        </article>
+        </section>
+
+    <!-- TOOLS -->
+    <section class="content-section section-wrap">
+      <div class="section-heading">
+        <p class="eyebrow">04 / TOOLKIT</p>
+        <h2>Technologies <span>used</span></h2>
+      </div>
+      <div class="skills-grid" style="grid-template-columns:repeat(3,1fr);">
+        <article class="panel skill-panel">
+          <div class="skill-heading"><span>⌘</span><h3>Language</h3></div>
+          <div class="skill-tags">
+            <span>Python 3</span>
+            <span>Requests</span>
+            <span>BeautifulSoup</span>
+          </div>
+        </article>
+        <article class="panel skill-panel">
+          <div class="skill-heading"><span>⚡</span><h3>Environment</h3></div>
+          <div class="skill-tags">
+            <span>DVWA</span>
+            <span>Apache</span>
+            <span>MySQL</span>
+          </div>
+        </article>
+        <article class="panel skill-panel">
+          <div class="skill-heading"><span>▤</span><h3>Reference</h3></div>
+          <div class="skill-tags">
+            <span>OWASP Top 10</span>
+            <span>PayloadsAllTheThings</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- REPOSITORY -->
+    <section class="content-section section-wrap">
+      <div class="section-heading">
+        <p class="eyebrow">SOURCE CODE</p>
+        <h2>View the <span>repository</span></h2>
+        <p>All Python scripts and documentation are available on GitHub.</p>
+      </div>
+            <article class="panel methodology-intro" style="text-align:center;">
+            <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">
+                The repository contains the original scripts, written while learning.
+            </p>
+            <a class="button primary" href="https://github.com/dkhyl/dvwa-low" target="_blank" rel="noreferrer" style="display:inline-flex;align-self:center;">
+                View on GitHub <span>↗</span>
+            </a>
+            </article>
+    </section>
+
+    <!-- NEXT PROJECT -->
+    <section class="content-section section-wrap" style="padding-top:40px;">
+      <a href="project-cs50.html" style="display:block;text-decoration:none;color:inherit;">
+        <article class="panel next-project-card">
+          <div>
+            <p class="eyebrow" style="color:var(--accent);">NEXT PROJECT</p>
+            <h2 class="next-project-title">URL Shortener <span>— CS50x</span></h2>
+            <p style="font-size:14px;color:var(--muted);margin:0;">A Flask web application built as the final capstone for Harvard's CS50x.</p>
+          </div>
+          <span class="button primary" style="white-space:nowrap;">View project <span>→</span></span>
+        </article>
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg viewBox="0 0 3 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+          <rect x="1" y="0" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="1" width="1" height="1" fill="currentColor"/>
+          <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="1" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>DAKHEL <b>ALHAWTAH</b></span>
+    </a>
+    <a href="#top" class="back-top">Back to top ↑</a>
+    <small>© <span id="year"></span> Dakhel Alhawtah · Built with HTML, JavaScript, Tailwind CSS</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

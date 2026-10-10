@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061018">
+  <meta name="description" content="Dakhel Law Firm Pentest Lab — A planned internal network assessment of a fictional law firm's Windows environment.">
+  <title>Dakhel Law Firm Pentest Lab — Dakhel Alhawtah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ============================================
+       ARTISTIC BLUR — Middle content fades away
+       ============================================ */
+    .blurred-content {
+      filter: blur(3px);
+      opacity: 0.35;
+      pointer-events: none;
+      user-select: none;
+      position: relative;
+      transition: filter .4s ease, opacity .4s ease;
+    }
+
+    .blurred-content::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        transparent 0%,
+        transparent 30%,
+        rgba(10,14,20,0.5) 60%,
+        rgba(10,14,20,0.85) 85%,
+        rgba(10,14,20,1) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Reveal on hover (optional desktop nicety) */
+    @media (hover: hover) {
+      .blurred-content:hover {
+        filter: blur(1.5px);
+        opacity: 0.55;
+      }
+    }
+
+    /* Next project card — fully clear */
+    .next-project-card {
+      padding: 32px;
+      background: linear-gradient(135deg,
+        rgba(88,166,255,0.08) 0%,
+        rgba(88,166,255,0.02) 100%);
+      border: 1px solid rgba(88,166,255,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      position: relative;
+      transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .next-project-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .next-project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(88,166,255,0.15), 0 0 24px rgba(88,166,255,0.08);
+    }
+
+    .next-project-card:hover::before {
+      opacity: 1;
+    }
+
+    .next-project-title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .next-project-title span {
+      background: linear-gradient(135deg, var(--accent), #79c0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dakhel home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 3 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+          <rect x="1" y="0" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="1" width="1" height="1" fill="currentColor"/>
+          <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="1" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>DAKHEL <b>ALHAWTAH</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" type="button">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="certifications.html">Certifications</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="ctf.html">CTF</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">☼</button>
+  </header>
+
+  <main>
+
+    <!-- HERO — CLEAR -->
+    <section class="content-section section-wrap" style="padding-top:64px;">
+      <div class="section-heading">
+        <p class="eyebrow">PROJECT · PENETRATION TESTING LAB</p>
+        <h2>Dakhel Law Firm <span>Pentest Lab</span></h2>
+        <p>A simulated internal network assessment of a law firm, hosted in Microsoft Azure. The attack begins by compromising a single external workstation, then pivoting into the law firm's internal network through a tunnel to simulate a realistic external-to-internal attack and report..</p>
+        <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+          <span class="project-status" style="color:#ffc44d;border-color:rgba(255,196,77,0.3);"><i style="background:#ffc44d;box-shadow:0 0 6px #ffc44d;"></i> Coming Soon</span>
+          <span class="rank-pill" style="color:var(--accent);background:var(--accent-soft);border-color:rgba(88,166,255,0.25);"> Windows 10 · Kali Linux · MITRE ATT&CK</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIDDLE — BLURRED -->
+    <div class="blurred-content">
+
+      <!-- OVERVIEW -->
+      <section class="content-section section-wrap" style="padding-top:20px;">
+        <div class="section-heading">
+          <p class="eyebrow">01 / OVERVIEW</p>
+          <h2>What this <span>project will cover</span></h2>
+        </div>
+        <div class="about-grid">
+          <article class="panel about-main">
+            <h3>The scenario</h3>
+            <p>Dakhel Law Firm is a fictional small law office with three employees: a lawyer, an IT support staff member, and a customer service representative. The lab will simulate a Windows 10 workstation connected over a VPN, mimicking an internal attacker's view of the network.</p>
+            <p class="muted">The goal is to demonstrate the full 5-phase penetration testing methodology — from reconnaissance to privilege escalation — with structured documentation and a professional report.</p>
+          </article>
+          <div class="value-cards">
+            <article class="mini-panel">
+              <span class="mini-icon">◎</span>
+              <div>
+                <h3>Scope</h3>
+                <p>Single Windows 10 endpoint, isolated lab network.</p>
+              </div>
+            </article>
+            <article class="mini-panel">
+              <span class="mini-icon">◈</span>
+              <div>
+                <h3>Type</h3>
+                <p>Gray-box internal assessment.</p>
+              </div>
+            </article>
+            <article class="mini-panel">
+              <span class="mini-icon">▤</span>
+              <div>
+                <h3>Deliverable</h3>
+                <p>Professional pentest report with evidence.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- METHODOLOGY -->
+      <section class="content-section section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">02 / METHODOLOGY</p>
+          <h2>Planned <span>attack chain</span></h2>
+          <p>The lab will follow the standard 5-phase penetration testing methodology.</p>
+        </div>
+
+        <div class="skills-grid" style="grid-template-columns:repeat(2,1fr);">
+          <article class="panel skill-panel">
+            <div class="skill-heading"><span>⌕</span><h3>Phase 1 — Reconnaissance</h3></div>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">
+              Network discovery and port scanning to identify exposed services on the target endpoint. All findings will be documented with open ports and service versions.
+            </p>
+          </article>
+
+          <article class="panel skill-panel">
+            <div class="skill-heading"><span>◎</span><h3>Phase 2 — Enumeration</h3></div>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">
+              SMB share enumeration and investigation of discovered services. The lab will include accessible shares with intentional misconfigurations.
+            </p>
+          </article>
+
+          <article class="panel skill-panel">
+            <div class="skill-heading"><span>⚡</span><h3>Phase 3 — Initial Access</h3></div>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">
+              Obtaining low-privileged credentials from an exposed share, then using RDP to gain an interactive session on the target workstation.
+            </p>
+          </article>
+
+          <article class="panel skill-panel">
+            <div class="skill-heading"><span>◈</span><h3>Phase 4 — Post-Exploitation</h3></div>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">
+              Local enumeration to identify privilege escalation vectors. The lab will feature a misconfigured service with writable binary path.
+            </p>
+          </article>
+
+          <article class="panel skill-panel" style="grid-column:1/-1;">
+            <div class="skill-heading"><span>▲</span><h3>Phase 5 — Privilege Escalation</h3></div>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.7;">
+              Replacing the vulnerable service binary with a payload and restarting the service to achieve <strong style="color:var(--text);">NT AUTHORITY\SYSTEM</strong> — the highest privilege level on Windows.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FINDINGS -->
+      <section class="content-section section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">03 / PLANNED FINDINGS</p>
+          <h2>Vulnerabilities to be <span>tested</span></h2>
+        </div>
+        <div class="credential-grid" style="grid-template-columns:1fr;">
+          <article class="credential-card" style="align-items:flex-start;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:12px;width:100%;">
+              <h3 style="font-size:14px;margin:0;">Weak Credentials on Exposed Share</h3>
+              <span class="credential-tag" style="color:#ff4d4d;background:rgba(255,77,77,0.1);border-color:rgba(255,77,77,0.25);">Critical</span>
+            </div>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;margin:0;">
+              A shared folder with exposed plaintext credentials will be configured and tested for access control weaknesses.
+            </p>
+          </article>
+
+          <article class="credential-card" style="align-items:flex-start;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:12px;width:100%;">
+              <h3 style="font-size:14px;margin:0;">Weak Service Permissions</h3>
+              <span class="credential-tag" style="color:#ff9d4d;background:rgba(255,157,77,0.1);border-color:rgba(255,157,77,0.25);">High</span>
+            </div>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;margin:0;">
+              A service running as SYSTEM with a writable binary path will demonstrate privilege escalation from a standard user.
+            </p>
+          </article>
+
+          <article class="credential-card" style="align-items:flex-start;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:12px;width:100%;">
+              <h3 style="font-size:14px;margin:0;">RDP Enabled for Standard Users</h3>
+              <span class="credential-tag" style="color:#ffc44d;background:rgba(255,196,77,0.1);border-color:rgba(255,196,77,0.25);">Medium</span>
+            </div>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;margin:0;">
+              Remote Desktop will be enabled without additional restrictions, increasing the potential attack surface.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- TOOLS -->
+      <section class="content-section section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">04 / TOOLKIT</p>
+          <h2>Tools that will be <span>used</span></h2>
+        </div>
+        <div class="skills-grid" style="grid-template-columns:repeat(3,1fr);">
+          <article class="panel skill-panel">
+            <div class="skill-heading"><span>⌘</span><h3>Reconnaissance</h3></div>
+            <div class="skill-tags">
+              <span>Nmap</span>
+              <span>enum4linux</span>
+              <span>smbclient</span>
+            </div>
+          </article>
+          <article class="panel skill-panel">
+            <div class="skill-heading"><span>⚡</span><h3>Exploitation</h3></div>
+            <div class="skill-tags">
+              <span>Metasploit</span>
+              <span>RDP (xfreerdp)</span>
+              <span>Impacket</span>
+            </div>
+          </article>
+          <article class="panel skill-panel">
+            <div class="skill-heading"><span>▤</span><h3>Post-Exploitation</h3></div>
+            <div class="skill-tags">
+              <span>WinPEAS</span>
+              <span>Sysmon</span>
+              <span>PowerShell</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- MITRE -->
+      <section class="content-section section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">05 / FRAMEWORK</p>
+          <h2>MITRE ATT&amp;CK <span>Coverage</span></h2>
+        </div>
+        <article class="panel" style="padding:28px;">
+          <div class="skill-tags" style="gap:12px;">
+            <span style="font-size:12px;padding:8px 14px;">T1046 — Network Service Discovery</span>
+            <span style="font-size:12px;padding:8px 14px;">T1135 — Network Share Discovery</span>
+            <span style="font-size:12px;padding:8px 14px;">T1078 — Valid Accounts</span>
+            <span style="font-size:12px;padding:8px 14px;">T1021.001 — Remote Services: RDP</span>
+            <span style="font-size:12px;padding:8px 14px;">T1574.010 — Hijack Execution Flow: Services</span>
+            <span style="font-size:12px;padding:8px 14px;">T1078.002 — Domain Accounts</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- REPORT CTA -->
+      <section class="content-section section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">DELIVERABLE</p>
+          <h2>Full <span>report</span></h2>
+          <p>A detailed pentest report documenting every step, evidence, and remediation recommendation.</p>
+        </div>
+        <article class="panel" style="padding:32px;text-align:center;">
+          <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">
+            Full report will include: Executive Summary · Methodology · Attack Narrative · Findings · Evidence · MITRE Mapping · Remediation Recommendations
+          </p>
+          <span class="button secondary" style="display:inline-flex;cursor:not-allowed;opacity:0.6;">
+            Report in progress <span>◷</span>
+          </span>
+          <p style="font-size:12px;color:var(--muted);margin-top:16px;opacity:.7;">
+            The lab is currently being designed. The report will be published upon completion.
+          </p>
+        </article>
+      </section>
+
+    </div>
+    <!-- END BLURRED CONTENT -->
+
+    <!-- NEXT PROJECT — CLEAR -->
+    <section class="content-section section-wrap" style="padding-top:40px;">
+      <a href="project-dvwa.html" style="display:block;text-decoration:none;color:inherit;">
+        <article class="panel next-project-card">
+          <div>
+            <p class="eyebrow" style="color:var(--accent);">NEXT PROJECT</p>
+            <h2 class="next-project-title">DVWA <span>Automation</span></h2>
+            <p style="font-size:14px;color:var(--muted);margin:0;">Python automation for web exploitation practice in a controlled lab.</p>
+          </div>
+          <span class="button primary" style="white-space:nowrap;">View project <span>→</span></span>
+        </article>
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg viewBox="0 0 3 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+          <rect x="1" y="0" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="1" width="1" height="1" fill="currentColor"/>
+          <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="1" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>DAKHEL <b>ALHAWTAH</b></span>
+    </a>
+    <a href="#top" class="back-top">Back to top ↑</a>
+    <small>© <span id="year"></span> Dakhel Alhawtah · Built with HTML, JavaScript, Tailwind CSS</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

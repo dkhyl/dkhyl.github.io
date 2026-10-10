@@ -12,120 +12,111 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page-glow glow-one"></div><div class="page-glow glow-two"></div>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Dakhel home"><span class="brand-mark">D</span><span>DAKHEL <b>ALHAWTAH</b></span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <a class="brand" href="index.html" aria-label="Dakhel home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 3 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+          <rect x="1" y="0" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="1" width="1" height="1" fill="currentColor"/>
+          <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="1" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>DAKHEL <b>ALHAWTAH</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" type="button">☰</button>
     <nav class="nav" id="nav">
-      <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#certifications">Certifications</a>
-      <a href="#projects">Projects</a><a href="#ctf">CTF</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="projects.html">Projects</a>
+      <a href="ctf.html">CTF</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">☼</button>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">☼</button>
   </header>
 
   <main>
     <section class="hero section-wrap" id="home">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="pulse"></span> CYBERSECURITY PORTFOLIO</p>
+        <p class="eyebrow">CYBERSECURITY PORTFOLIO</p>
         <p class="hello">Hello, I'm</p>
         <h1>Dakhel <span>Alhawtah</span></h1>
-        <h2>Cybersecurity <i>|</i> Penetration Testing &amp; Security Operations</h2>
-        <p class="hero-description">Law graduate transitioning into cybersecurity, with hands-on practice in IT support, penetration testing labs, and security analysis training.</p>
+        <h2>Aspiring Penetration Tester <i>|</i> Cybersecurity</h2>
+        <p class="hero-description">Law graduate transitioning into cybersecurity, building practical penetration testing skills through hands-on labs, security training, and technical projects.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">Explore my projects <span>↗</span></a>
+          <a class="button primary" href="projects.html">Explore My Projects <span>↗</span></a>
         </div>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/dakhel-a-251453159/" target="_blank" rel="noreferrer">in <span>LinkedIn</span></a>
           <a href="https://github.com/dkhyl" target="_blank" rel="noreferrer">⌘ <span>GitHub</span></a>
         </div>
-        <p class="location"><span>⌖</span> Riyadh, Saudi Arabia <b class="status-dot"></b></p>
+        <p class="location"><b class="status-dot"></b> Riyadh, Saudi Arabia </b></p>
       </div>
       <div class="hero-visual">
-        <div class="visual-grid"></div>
         <div class="terminal-window">
-          <div class="terminal-top"><span></span><span></span><span></span><small>security-lab — bash</small></div>
+          <div class="terminal-top"><span></span><span></span><span></span><small>d4kh3l@lab — bash</small></div>
           <div class="terminal-content">
-            <p><span class="term-green">dakhel@lab</span>:<span class="term-blue">~</span>$ whoami</p>
-            <p class="term-output">cybersecurity learner</p>
-            <p><span class="term-green">dakhel@lab</span>:<span class="term-blue">~</span>$ cat focus.txt</p>
-            <p class="term-output">pentesting<br>security analysis<br>continuous learning</p>
-            <p><span class="term-green">dakhel@lab</span>:<span class="term-blue">~</span>$ <span class="cursor"></span></p>
+            <p><span class="term-green">d4kh3l@lab</span>:<span class="term-blue">~</span>$ whoami</p>
+            <p class="term-output">curious mind. aspiring pentester.</p>
+
+            <p><span class="term-green">d4kh3l@lab</span>:<span class="term-blue">~</span>$ cat origin.txt</p>
+            <p class="term-output">A law graduate with a hacker mindset.<br>A passion for networks since my teenage years.</p>
+
+            <p><span class="term-green">d4kh3l@lab</span>:<span class="term-blue">~</span>$ cat focus.txt</p>
+            <p class="term-output">→ Network enumeration<br>→ Vulnerability assessment<br>→ Penetration testing labs</p>
+
+            <p><span class="term-green">d4kh3l@lab</span>:<span class="term-blue">~</span>$ cat mindset.txt</p>
+            <p class="term-output">Stay curious. Think critically.<br>Break things in the lab. Learn. Improve.</p>
+
+            <p><span class="term-green">d4kh3l@lab</span>:<span class="term-blue">~</span>$ echo $STATUS</p>
+            <p class="term-output"><span class="term-green">[+]</span> ALWAYS LEARNING<span class="cursor"></span></p>
           </div>
         </div>
-        <div class="floating-chip chip-top"><span class="chip-icon">⌘</span><span><b>Hands-on</b><small>Lab practice</small></span></div>
-        <div class="floating-chip chip-bottom"><span class="chip-icon green">✓</span><span><b>Always learning</b><small>One lab at a time</small></span></div>
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
       </div>
+    </section>
     </section>
 
     <section class="stats-strip section-wrap">
       <div><strong>03<span>+</span></strong><small>Featured projects</small></div>
-      <div><strong>06<span>+</span></strong><small>Certifications &amp; training</small></div>
+      <div><strong>05<span>+</span></strong><small>Certifications &amp; training</small></div>
       <div><strong>CTF</strong><small>Global competition experience</small></div>
       <div><strong>∞</strong><small>Curiosity to learn</small></div>
     </section>
 
-    <section class="content-section section-wrap" id="about">
-      <div class="section-heading"><p class="eyebrow">01 / PROFILE</p><h2>About <span>Me</span></h2><p>Bringing a risk-aware mindset to technical security work.</p></div>
-      <div class="about-grid">
-        <article class="panel about-main"><div class="panel-icon">◈</div><h3>Law meets cybersecurity</h3><p>My legal background helps me look beyond the technical finding: I pay attention to evidence, assess potential business impact, and communicate recommendations clearly.</p><p class="muted">I am building my technical experience through structured learning, practical labs, and security projects.</p></article>
-        <div class="value-cards">
-          <article class="mini-panel"><span class="mini-icon">⌕</span><div><h3>Detail-oriented</h3><p>Careful examination of technical evidence.</p></div></article>
-          <article class="mini-panel"><span class="mini-icon">◉</span><div><h3>Risk-focused</h3><p>Connecting security findings to business impact.</p></div></article>
-          <article class="mini-panel"><span class="mini-icon">▤</span><div><h3>Report-driven</h3><p>Clear findings and actionable recommendations.</p></div></article>
-        </div>
+    <section class="contact-section section-wrap">
+      <div>
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Want to know <span>more?</span></h2>
+        <p>Explore my background, certifications, and hands-on projects.</p>
       </div>
-    </section>
-
-    <section class="content-section section-wrap" id="certifications">
-      <div class="section-heading"><p class="eyebrow">02 / CREDENTIALS</p><h2>Certifications &amp; <span>Training</span></h2><p>Verified credentials and continuous learning.</p></div>
-      <div class="credential-grid">
-        <article class="credential-card"><div class="credential-icon">S+</div><div><h3>CompTIA Security+</h3><p>CompTIA · SY0-701</p></div><span class="credential-tag">Earned</span></article>
-        <article class="credential-card"><div class="credential-icon">eJ</div><div><h3>eJPTv2</h3><p>INE · Junior Penetration Tester</p></div><span class="credential-tag">Earned*</span></article>
-        <article class="credential-card"><div class="credential-icon">HTB</div><div><h3>CJCA</h3><p>Hack The Box · Certified Junior Cybersecurity Associate</p></div><span class="credential-tag">Earned*</span></article>
-        <article class="credential-card"><div class="credential-icon">CS</div><div><h3>CS50x</h3><p>HarvardX / edX · Computer Science</p></div><span class="credential-tag">Course</span></article>
-        <article class="credential-card"><div class="credential-icon">IT</div><div><h3>Google IT Support</h3><p>Google / Coursera</p></div><span class="credential-tag">Certificate</span></article>
-        <article class="credential-card"><div class="credential-icon">SOC</div><div><h3>LetsDefend SOC Path</h3><p>Security monitoring &amp; analysis training</p></div><span class="credential-tag training">Training</span></article>
+      <div class="contact-actions">
+        <a class="button primary" href="about.html">About me →</a>
+        <a class="button secondary" href="projects.html">See projects →</a>
       </div>
-      <div class="learning-bar"><span class="learning-icon">⌁</span><div><b>Currently studying</b><p>HTB CPTS <span>•</span> eCPPTv3 <span>•</span> C++ fundamentals</p></div></div>
-    </section>
-
-    <section class="content-section section-wrap" id="ctf">
-      <div class="section-heading"><p class="eyebrow">03 / COMPETITIONS</p><h2>CTF <span>Achievements</span></h2><p>Competition experience and practical problem-solving.</p></div>
-      <article class="ctf-card panel">
-        <div class="ctf-emblem">⬡</div><div class="ctf-body"><div class="ctf-title"><div><p class="eyebrow">HACK THE BOX</p><h3>Cyber Apocalypse CTF 2026</h3></div><span class="rank-pill">Team rank: 399 / 6,744</span></div>
-          <p>Participated in challenges across web, cryptography, and forensics categories.</p><div class="ctf-tags"><span>Web</span><span>Cryptography</span><span>Forensics</span></div>
-          <div class="ctf-secondary"><b>Previous participation</b><span>Black Hat MEA CTF · 2021, 2022</span></div>
-        </div>
-      </article>
-    </section>
-
-    <section class="content-section section-wrap" id="skills">
-      <div class="section-heading"><p class="eyebrow">04 / TOOLKIT</p><h2>Skills &amp; <span>Tools</span></h2><p>Tools and technologies I have used or am actively learning.</p></div>
-      <div class="skills-grid">
-        <article class="panel skill-panel"><div class="skill-heading"><span>⌘</span><h3>Offensive security</h3></div><div class="skill-tags"><span>Kali Linux</span><span>Nmap</span><span>Metasploit</span><span>Burp Suite</span></div></article>
-        <article class="panel skill-panel"><div class="skill-heading"><span>◉</span><h3>Analysis &amp; networking</h3></div><div class="skill-tags"><span>Wireshark</span><span>Linux</span><span>Networking</span><span>Log analysis training</span></div></article>
-        <article class="panel skill-panel"><div class="skill-heading"><span>&lt;/&gt;</span><h3>Programming &amp; scripting</h3></div><div class="skill-tags"><span>Python</span><span>Bash</span><span>C++ · learning</span></div></article>
-      </div>
-    </section>
-
-    <section class="content-section section-wrap" id="projects">
-      <div class="section-heading"><p class="eyebrow">05 / SELECTED WORK</p><h2>Featured <span>Projects</span></h2><p>Practical work, experiments, and learning projects.</p></div>
-      <div class="projects-grid">
-        <article class="project-card featured-project"><div class="project-top"><span class="project-symbol">⬡</span><span class="project-status"><i></i> In progress</span></div><p class="project-type">PENETRATION TESTING LAB</p><h3>Dakhel Law Firm Pentest Lab</h3><p>Controlled internal network assessment following a structured methodology, with planned reporting and MITRE ATT&amp;CK mapping.</p><div class="project-tags"><span>Windows lab</span><span>Reporting</span><span>MITRE ATT&amp;CK</span></div><a class="project-link" href="https://github.com/dkhyl" target="_blank" rel="noreferrer">Project details <span>↗</span></a></article>
-        <article class="project-card"><div class="project-top"><span class="project-symbol blue">⌘</span><span class="project-status">Web security</span></div><p class="project-type">PYTHON AUTOMATION</p><h3>DVWA Automation</h3><p>Python automation for practicing SQL injection, XSS, and command injection in DVWA's low-security lab.</p><div class="project-tags"><span>Python</span><span>SQLi</span><span>XSS</span></div><a class="project-link" href="https://github.com/dkhyl/dvwa-low" target="_blank" rel="noreferrer">View repository <span>↗</span></a></article>
-        <article class="project-card"><div class="project-top"><span class="project-symbol purple">⌘</span><span class="project-status">Web development</span></div><p class="project-type">CS50X CAPSTONE</p><h3>Final Project — CS50x</h3><p>Flask web application built as a computer science capstone, with a Python backend and web frontend.</p><div class="project-tags"><span>Python</span><span>Flask</span><span>JavaScript</span></div><a class="project-link" href="https://github.com/dkhyl/Final-Project-CS50" target="_blank" rel="noreferrer">View repository <span>↗</span></a></article>
-        <article class="project-card"><div class="project-top"><span class="project-symbol green">⌕</span><span class="project-status">Scripting</span></div><p class="project-type">SHELL TOOL</p><h3>Search4Me</h3><p>A lightweight shell-based utility for searching across multiple sites.</p><div class="project-tags"><span>Bash</span><span>Automation</span></div><a class="project-link" href="https://github.com/dkhyl/search4me" target="_blank" rel="noreferrer">View repository <span>↗</span></a></article>
-      </div>
-    </section>
-
-    <section class="contact-section section-wrap" id="contact">
-      <div><p class="eyebrow">06 / CONTACT</p><h2>Let's connect<span>.</span></h2><p>Open to cybersecurity opportunities, collaboration, and learning from the community.</p></div>
-      <div class="contact-actions"><a class="button primary" href="https://www.linkedin.com/in/dakhel-a-251453159/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a><a class="button secondary" href="https://github.com/dkhyl" target="_blank" rel="noreferrer">Explore GitHub ↗</a></div>
     </section>
   </main>
 
-  <footer class="site-footer section-wrap"><a class="brand" href="#home"><span class="brand-mark">D</span><span>DAKHEL <b>ALHAWTAH</b></span></a><p>Building practical skills. One lab at a time.</p><a href="#home" class="back-top">Back to top ↑</a><small>© <span id="year"></span> Dakhel Alhawtah · Built with HTML, CSS &amp; JavaScript</small></footer>
+  <footer class="site-footer section-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg viewBox="0 0 3 3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+          <rect x="1" y="0" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="1" width="1" height="1" fill="currentColor"/>
+          <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="1" y="2" width="1" height="1" fill="currentColor"/>
+          <rect x="2" y="2" width="1" height="1" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>DAKHEL <b>ALHAWTAH</b></span>
+    </a>
+    <!-- <a href="#home" class="back-top">Back to top ↑</a> -->
+    <small>
+      © <span id="year"></span> Dakhel Alhawtah · Built with HTML, JavaScript, Tailwind CSS
+    </small>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
