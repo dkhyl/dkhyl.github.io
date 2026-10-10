@@ -452,10 +452,31 @@ button{font:inherit;cursor:pointer}
   align-items:center;
   gap:16px;
 }
+.credential-card{
+  position:relative;
+  overflow:hidden;
+}
+
+.credential-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:2px;
+  background:linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity:0;
+  transition:opacity .3s;
+}
+
 .credential-card:hover{
-  border-color:var(--border-hover);
-  transform:translateY(-2px);
-  box-shadow:0 8px 24px rgba(0,0,0,0.2);
+  border-color:var(--accent);
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(88,166,255,0.15), 0 0 24px rgba(88,166,255,0.08);
+}
+
+.credential-card:hover::before{
+  opacity:1;
 }
 .credential-icon{
   width:44px;
